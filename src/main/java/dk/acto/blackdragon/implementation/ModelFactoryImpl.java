@@ -10,7 +10,7 @@ public class ModelFactoryImpl implements ModelFactory {
      *
      * Parsing the string input we got from DataFetcher into a list of Model object.
      *
-     * @return a Vavr List containing Model objects parsed from the input data
+     * @return model object list
      */
     public List<Model> parse(String string) {
 

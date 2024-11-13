@@ -14,7 +14,7 @@ public class DataFetcherImpl implements DataFetcher {
      *
      * Simply gets the content from the URL, reads it line by line and appends to stringbuilder with a new line.
      *
-     * @return the fetched content as a String, with any trailing newline removed
+     * @return the fetched content as a String
      */
     @Override
     public String fetchData(URL url) {
