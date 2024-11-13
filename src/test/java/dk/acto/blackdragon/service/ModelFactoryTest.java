@@ -1,5 +1,6 @@
 package dk.acto.blackdragon.service;
 
+import dk.acto.blackdragon.implementation.ModelFactoryImpl;
 import dk.acto.blackdragon.model.Model;
 import io.vavr.collection.List;
 import org.testng.ITestContext;
@@ -15,12 +16,8 @@ public class ModelFactoryTest {
 
         String data = String.valueOf(context.getAttribute("data"));
 
-        ModelFactory<Model> subject = new ModelFactory<Model>() {
-            @Override
-            public List<Model> parse(String string) {
-                return null;
-            }
-        };
+        // My implementation
+        ModelFactory<Model> subject = new ModelFactoryImpl();
 
         List<Model> result = subject.parse(data);
         assertNotNull(result);
