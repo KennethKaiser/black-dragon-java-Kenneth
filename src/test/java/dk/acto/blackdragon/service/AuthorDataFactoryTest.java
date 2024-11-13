@@ -1,5 +1,6 @@
 package dk.acto.blackdragon.service;
 
+import dk.acto.blackdragon.implementation.AuthorDataFactoryImpl;
 import dk.acto.blackdragon.model.AuthorData;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
@@ -12,12 +13,8 @@ public class AuthorDataFactoryTest {
     @Test(groups = "transform")
     public void testCreate(ITestContext context) {
 
-        AuthorDataFactory subject = new AuthorDataFactory() {
-            @Override
-            public AuthorData create() {
-                return null;
-            }
-        };
+        //My own solution to run the test
+        AuthorDataFactory subject = new AuthorDataFactoryImpl();
 
         AuthorData result = subject.create();
         assertNotNull(result);
