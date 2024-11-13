@@ -20,6 +20,7 @@ public class ModelTransformerTest {
 
         List<Model> models = (List<Model>) context.getAttribute("models");
 
+        //My Own Implementation
         ModelTransformer<Model, Stats> subject = new ModelTransformerImpl();
 
         Stats result = subject.transform(models);
